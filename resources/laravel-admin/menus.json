@@ -1,0 +1,20 @@
+{
+   "menus":[
+      {
+         "section":"Modules",
+         "items":[
+            {
+               "title":"Review",
+               "icon":"fas fa-comment",
+               "url":"\/admin\/review"
+            },
+            {
+               "title":"Book",
+               "icon":"fas fa-book",
+               "url":"\/admin\/book"
+            }
+            
+         ]
+      }
+   ]
+}

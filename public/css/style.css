@@ -1,0 +1,1165 @@
+/***** General CSS *****/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    overflow-x: hidden;
+    font-size: 14px;
+    line-height: 22px;
+    color: #555555;
+    position: relative;
+    padding: 0px !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+}
+
+img {
+    max-width:100%;
+}
+
+
+input[type="text"]:focus, textarea:focus, input[type="password"]:focus, select:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="tel"]:focus, input[type="number"]:focus {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    outline: none;
+}
+
+select, input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], textarea, input[type="tel"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+ul {
+    padding: 0;
+    margin:0;
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.center-col {
+    margin: 0 auto;
+    display: table;
+    float: none;
+}
+
+.flexRow {
+    display: flex;
+}
+
+.flexCol {
+    display: flex;
+    align-items: center;
+}
+
+.flexCol-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexCol-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.all-section {
+    padding: 50px 0px;
+}
+
+.theme-heading {
+    margin: 0 0 30px;
+    position:relative;
+}
+
+.theme-heading h1 {
+    color: #15173d;
+    font-size: 54px;
+    margin: 10px 0 50px;
+    position: relative;
+}
+
+.theme-heading p {
+    color: #636363;
+    font-size: 16px;
+    margin: 0px 0px 40px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+.theme-btn {
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -moz-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -ms-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -o-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: linear-gradient(to right, #b48131, #ede9a6, #916826);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    font-size: 22px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.theme-btn:hover {
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -moz-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -ms-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -o-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: linear-gradient(to right, #b48131, #ede9a6, #916826);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.theme-btn:before {
+    position: absolute;
+    content: '';
+    background: url(../images/btn-border-top.png) no-repeat;
+    width: 100%;
+    height: 20px;
+    top: -10px;
+    background-size: contain;
+    left: 0;
+}
+
+.theme-btn:after {
+    position: absolute;
+    content: '';
+    background: url(../images/btn-border-btm.png) no-repeat;
+    width: 100%;
+    height: 20px;
+    bottom: -15px;
+    background-size: contain;
+    left: 0;
+}
+
+.padd-0 {
+    padding:0px
+}
+
+
+
+
+/* BEGIN: HEADER SEC CSS */
+
+
+
+/* sidenav-css start */
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: -500px;
+  background: #e47225;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 250px;
+}
+/* The navigation menu links */
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .sidenav a:focus {
+  color: #000;
+  text-decoration: none;
+  padding-left: 40px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+.mobilecontainer span {
+  color: #e47225;
+  margin-right: 10px;
+  margin: 0px 9px;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1;
+}
+.mobilecontainer img {
+  width: 63px;
+  margin: -19px 0;
+  position: relative;
+  z-index: 1;
+}
+.mobilecontainer {
+  background-color: #fff;
+  padding-left: 20px;
+}
+/* sidenav-css end */
+
+
+
+/*navigation*/
+header {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.main-navigate {
+    margin: 0;
+    background: transparent;
+    padding: 5px 2%;
+}
+
+.nav-flex {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    margin-top: 0px;
+    text-align: right;
+}
+
+.navigation ul li a {
+    padding: 10px 20px;
+    font-size: 22px;
+    border-radius: 5px !important;
+    font-weight: 500;
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -moz-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -ms-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -o-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: linear-gradient(to right, #b48131, #ede9a6, #916826);
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+    border: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.navigation ul li.active a {
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -moz-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -ms-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -o-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: linear-gradient(to right, #b48131, #ede9a6, #916826);
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding: 0px 10px;
+    margin: 0px 5px;
+    border-radius: 5px;
+    background: rgb(0,19,0); /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgba(0,19,0,1) 0%, rgba(7,42,6,1) 36%, rgba(7,42,6,1) 59%, rgba(0,19,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(0,19,0,1) 0%,rgba(7,42,6,1) 36%,rgba(7,42,6,1) 59%,rgba(0,19,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(0,19,0,1) 0%,rgba(7,42,6,1) 36%,rgba(7,42,6,1) 59%,rgba(0,19,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+/*.main-navigate .navbar-inverse {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    padding: 30px 5%;
+    margin: 0;
+    position: fixed;
+    display: table;
+    width: 100%;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-navigate .navbar-inverse.affix {
+    display: table;
+    width: 100%;
+    z-index: 9;
+    top: 0;
+    padding: 30px 0px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0px;
+}
+
+.main-navigate .navbar-header {
+    float: none;
+}
+
+.main-navigate .modal-fullscreen-menu .close {
+    color: white;
+    opacity: 1;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 32px;
+}
+
+.main-navigate .modal-fullscreen-menu .close:focus {
+    outline: 0;
+}
+
+.main-navigate .modal-fullscreen-menu .modal-dialog {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.modal-open {
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0.90);
+}
+
+.main-navigate .modal-fullscreen-menu .modal-content {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.main-navigate .modal-fullscreen-menu .list-group li {
+    list-style: none;
+}
+
+.main-navigate a.navbar-brand {
+    float: none;
+    display: block;
+    height: auto;
+    padding: 0 10px;
+}
+
+.main-navigate .navbar-inverse .btn-link {
+    margin: 0;
+    padding: 0 10px;
+    outline: 0;
+    text-transform: uppercase;
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -moz-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -ms-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -o-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: linear-gradient(to right, #b48131, #ede9a6, #916826);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    font-size: 22px;
+}
+
+.main-navigate .navbar-inverse .btn-link:hover {
+    text-transform: uppercase;
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -moz-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -ms-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: -o-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image: linear-gradient(to right, #b48131, #ede9a6, #916826);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.main-navigate .navbar-inverse .btn-link span img {
+    display: inline-block;
+    margin-top: -5px;
+}
+
+.main-navigate .modal-fullscreen-menu .list-group {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-navigate .modal-fullscreen-menu .list-group a {
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    border: none;
+    transition: all 0.25s ease;
+    background-color: transparent;
+    color: white;
+    padding: 25px 0;
+    height: auto;
+    font-size: 22px;
+    line-height: 0;
+    margin: 10px 0;
+}
+
+.main-navigate .modal-fullscreen-menu .list-group a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(129, 118, 47, 1) 0%, rgba(180, 129, 32, 1) 100%); 
+    background: -webkit-linear-gradient(top, rgba(229, 218, 147, 1) 0%,rgba(180, 129, 32, 1) 100%); 
+    background: linear-gradient(to bottom, rgba(229, 218, 147, 1) 0%,rgba(180, 129, 32, 1) 100%);
+    z-index: -1;
+    opacity: 0;
+    transform: scale3d(0.7, 1, 1);
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.main-navigate .modal-fullscreen-menu .list-group a:hover,
+.main-navigate .modal-fullscreen-menu .list-group a.active {
+    color: #fff;
+    background: rgba(229, 218, 147, 1); 
+    background: -moz-linear-gradient(top, rgba(129, 118, 47, 1) 0%, rgba(180, 129, 32, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(229, 218, 147, 1) 0%,rgba(180, 129, 32, 1) 100%); 
+    background: linear-gradient(to bottom, rgba(229, 218, 147, 1) 0%,rgba(180, 129, 32, 1) 100%); 
+    transition: opacity 1s;
+}
+
+.main-navigate .modal-fullscreen-menu .list-group a:hover:before {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.main-navigate .modal-backdrop.in {
+    opacity: 1;
+}
+
+.main-navigate ul.list-inline {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-navigate ul.list-inline.text-right {
+    justify-content: flex-end;
+}
+
+.main-navigate ul.list-inline li {
+    padding: 0 15px;
+}
+
+.main-navigate ul.list-inline li a {
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-navigate ul.list-inline li a:hover {
+    color: #3099ea;
+}
+
+.main-navigate ul.list-inline li a i {
+    padding-right: 5px;
+}
+
+ul.dropdown-menu {
+    background: rgb(0,19,0);
+    background: -moz-linear-gradient(45deg, rgba(0,19,0,1) 0%, rgba(7,42,6,1) 36%, rgba(7,42,6,1) 59%, rgba(0,19,0,1) 100%); 
+    background: -webkit-linear-gradient(45deg, rgba(0,19,0,1) 0%,rgba(7,42,6,1) 36%,rgba(7,42,6,1) 59%,rgba(0,19,0,1) 100%); 
+    background: linear-gradient(45deg, rgba(0,19,0,1) 0%,rgba(7,42,6,1) 36%,rgba(7,42,6,1) 59%,rgba(0,19,0,1) 100%); 
+    padding: 20px 15px;
+    box-shadow: 0px 0px 20px #365636;
+}
+
+.main-navigate ul.dropdown-menu li a {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    padding: 10px 40px 20px;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
+    border-bottom: 1px solid;
+    border-color: rgba(255,255,255,0.2);
+    border-radius: 0px;
+    text-align: center;
+    margin: 0px 0px 10px;
+    line-height: 22px;
+}
+
+.main-navigate ul.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.main-navigate ul.dropdown-menu li a:hover {
+    background: none;
+    color: #fff;
+    border-color: #fff;
+}*/
+/* END: HEADER SEC CSS */
+
+
+
+
+/* BEGIN: MAIN SEC CSS */
+#section0 {
+    background: url(../images/section-main-bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-sec {
+    display: inline-flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/*.main-sec:before {
+    position: absolute;
+    content: '11:11';
+    font-size: 80vh;
+    right: 0px;
+    font-family: 'Playfair Display', serif;
+    top: 0%;
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); 
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826);
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    height: 100vh;
+    padding-top: 16%;
+}*/
+
+.sec-padding {
+    padding: 0 5%;
+}
+
+.main-sec h2 {
+    font-size: 36px;
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding-bottom: 10px;
+    font-weight: 400;
+    padding-right: 3%;
+}
+
+.main-sec p {
+    font-size: 17px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 35px;
+    padding-right: 20%;
+}
+
+.book-img img {
+    width: 80%;
+}
+
+.right-box .book-img {
+    -webkit-animation: floating 0.5s ease .5s infinite;
+    animation: floating 2s ease .5s infinite;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+@keyframes floating {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    50% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+.commingsoon {
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    letter-spacing: 5px;
+    -webkit-animation: floating 0.5s ease .5s infinite;
+    animation: floating 2s ease .5s infinite;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.commingsoon:hover {
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.commingsoon:before {
+    position: absolute;
+    content: '';
+    background: url(../images/comming-soon-before.png) no-repeat;
+    height: 18px;
+    width: 145px;
+    bottom: -30px;
+    -webkit-animation: floating 0.5s ease .5s infinite;
+    animation: floating 2s ease .5s infinite;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+/* END: MAIN SEC CSS */
+
+
+
+
+/* BEGIN: ABOUT SEC CSS */
+#section1 {
+    background: url(../images/section-about-bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.about-sec {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+}
+
+.about-sec:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0%;
+    height: 435px;
+    background: url(../images/about-before-img.png) no-repeat;
+    width: 710px;
+    background-position: center center;
+    z-index: -1;
+    transform: translate(-50%, 0px);
+}
+
+.about-heading {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+.about-heading h2{
+    background-image: -webkit-linear-gradient(left, #a46e19, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #a46e19, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #a46e19, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #a46e19, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #a46e19, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.book-slide-box h2  {
+    font-size: 46px;
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding-bottom: 10px;
+    font-weight: 400;
+    padding-right: 3%;
+}
+
+.book-slide-box p {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 35px;
+}
+
+.book-slide-box .book-img img {
+    width: 390px;
+    margin-top: 30%;
+}
+
+
+.owl-carousel.owl-carousel-box .owl-stage {
+    right: 3%;
+}
+
+.owl-carousel-box .owl-item {
+    opacity: 0;
+}
+
+.owl-carousel-box .owl-item.active.center {
+    opacity: 1;
+}
+
+.owl-carousel-box .owl-item.active {
+    opacity: 1;
+}
+
+.owl-carousel-box .owl-item.active.center {
+    opacity: 1;
+}
+
+.owl-carousel-box .owl-item.active .book-img {
+    opacity: 0.5;
+}
+
+.owl-carousel-box .owl-item.active.center .book-img {
+    opacity: 1;
+}
+
+/* END: ABOUT SEC CSS */
+
+
+
+
+
+/* BEGIN: VIDEO SEC CSS */
+.video-sec {
+    background: url(../images/section-video-bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.video-sec {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.video-sec:before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: 0%;
+    height: 100vh;
+    background: url(../images/video-sec-before.png) no-repeat;
+    width: 100%;
+    background-size: 80%;
+    background-position: center center;
+    z-index: -1;
+}
+
+.watch-video-btn h3{
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.watch-video-btn a {
+    width: 150px;
+    display: inline-block;
+    line-height: 150px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(180,129,32); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(180,129,32,0.6) 27%, rgba(248,251,192,0.6) 63%, rgba(186,140,59,0.6) 95%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(180,129,32,0.6) 27%,rgba(248,251,192,0.6) 63%,rgba(186,140,59,0.6) 95%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(180,129,32,0.6) 27%,rgba(248,251,192,0.6) 63%,rgba(186,140,59,0.6) 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    font-size: 30px;
+    color: #000;
+}
+
+.watch-video-btn a span {
+    width: 120px;
+    display: inline-block;
+    line-height: 120px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(180,129,32); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(180,129,32,1) 27%, rgba(248,251,192,1) 63%, rgba(186,140,59,1) 95%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.watch-video-btn a span i {
+    font-size: 30px;
+    color: #000;
+}
+/* END: VIDEO SEC CSS */
+
+
+
+
+/* BEGIN: CONTACT SEC CSS */
+.contact-page-sec {
+    background: url(../images/section-contact-bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.contact-sec {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-sec:before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    bottom: 0%;
+    height: 200px;
+    background: url(../images/contact-bottom-img.png) no-repeat;
+    width: 100%;
+    background-size: 60%;
+    background-position: center center;
+    z-index: -1;
+}
+
+.contact-heading h2{
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.contactpagesec {
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 0 12%;
+}
+
+.contact-heading {
+    padding-top: 4%;
+}
+
+.contactpagesec form .name {
+    position: relative;
+}
+
+.contactpagesec form textarea.form-control {
+    font-size: 14px;
+    border-radius: 4px;
+    padding-left: 70px;
+    padding-top: 13px;
+    border: 1px solid #cacaca;
+    resize: none;
+    color: white;
+    background: transparent;
+}
+
+.contactpagesec form input.form-control {
+    height: 50px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding-left: 70px;
+    padding-top: 7px;
+    border: 1px solid #cacaca;
+    line-height: 0;
+    color: white;
+    background: transparent;
+}
+
+.contactpagesec form .form-group {
+    position: relative;
+}
+
+.contactpagesec form .form-group span {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    color: #868d86;
+    font-size: 16px;
+}
+
+.contactpagesec form .form-group span:before {
+    position: absolute;
+    content: '';
+    background: url(../images/field-before-icon.png) no-repeat;
+    width: 10px;
+    height: 50px;
+    right: -25px;
+    background-position: center center;
+    top: -13px;
+}
+
+
+.contactpagesec form button {
+    border: 0;
+    border-radius: 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: rgb(180,129,32);
+    background: -moz-linear-gradient(left, rgba(180,129,32,1) 27%, rgba(248,251,192,1) 63%, rgba(186,140,59,1) 95%);
+    background: -webkit-linear-gradient(left, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%);
+    background: linear-gradient(to right, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%);
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    padding: 15px 20px;
+    width: 25%;
+}
+
+.contactpagesec form button:hover {
+    background: rgb(180,129,32);
+    background: -moz-linear-gradient(left, rgba(180,129,32,1) 27%, rgba(248,251,192,1) 63%, rgba(186,140,59,1) 95%);
+    background: -webkit-linear-gradient(left, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%);
+    background: linear-gradient(to right, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%);
+    color: #000;
+}
+
+.copy-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    color: #000;
+    padding: 7px 10px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 999;
+    background: rgb(180,129,32);
+    background: -moz-linear-gradient(left, rgba(180,129,32,1) 27%, rgba(248,251,192,1) 63%, rgba(186,140,59,1) 95%);
+    background: -webkit-linear-gradient(left, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%);
+    background: linear-gradient(to right, rgba(180,129,32,1) 27%,rgba(248,251,192,1) 63%,rgba(186,140,59,1) 95%);
+}
+/* END: CONTACT SEC CSS */
+
+
+
+/* BEGIN: ABOUT PAGE CSS */
+.bannerSec {
+    position: relative;
+}
+
+.bannerSec>img {
+    width: 100%;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.bannerSec h2{
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 80px;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.bannerSec p {
+    color: #fff;
+    font-size: 18px;
+    padding: 0 10%;
+}
+
+section.about-author {
+    background: #031b02;
+    padding: 10% 10%;
+}
+
+.green-bg {
+    background: #031b02;
+}
+
+.about-author h2  {
+    font-size: 46px;
+    background-image: -webkit-linear-gradient(left, #b48131, #ede9a6, #916826); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #b48131, #ede9a6, #916826); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #b48131, #ede9a6, #916826); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #b48131, #ede9a6, #916826); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding-bottom: 10px;
+    font-weight: 400;
+    padding-right: 3%;
+    margin-top: 0px;
+}
+
+.about-author p {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 35px;
+}
+
+/* END: ABOUT PAGE CSS */
+
+
+
+/* BEGIN: BOOK PAGE CSS */
+section.book-sec {
+    padding: 10% 0%;
+    z-index: 1;
+    position: relative;
+    height: auto;
+}
+
+section.book-sec:before {
+    position: absolute;
+    content: '';
+    background: url(../images/book-sec-bg.png) no-repeat;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+}
+
+.book-before {
+    position: relative;
+    z-index: 99;
+    text-align: center;
+}
+
+.book-before:before {
+    position: absolute;
+    content: '';
+    background: url(../images/book-before.png) no-repeat;
+    width: 100%;
+    height: 670px;
+    background-size: cover;
+    left: 0;
+    z-index: -1;
+    top: -25%;
+}
+
+.book-slide-box .book-img img {
+    width: 430px;
+    margin-top: 0;
+    display: inline-block;
+}
+
+.about-slider .book-slide-box .book-img img {
+    width: 280px !important;
+}
+
+.book-img.book-before {
+    text-align: center;
+}
+
+
+/* END: BOOK PAGE CSS */
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){}
+@media only screen and (min-width: 768px) and (max-width: 1023px){}
+@media only screen and (min-width: 300px) and (max-width: 767px){}
